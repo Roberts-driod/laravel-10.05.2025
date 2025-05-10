@@ -12,6 +12,7 @@
 
 <div>
     <a href= '/books/{{ $book->id }}'> show </a>
+    <a href= '/books/{{ $book->id }}/edit'> Edit </a>
 </div>
 </li>
 
