@@ -35,4 +35,10 @@ public function show($id) {
  return view('books.show' , ['singlebook' => $book]);
 }
 
+
+public function destroy($id) {
+  $book = Book::find($id);
+  $book->delete();
+  return redirect('/books');
+}
 }

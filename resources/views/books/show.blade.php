@@ -1,5 +1,7 @@
 <h1> Book</h1>
-
+<div>
+    <a href= '/books/{{singlebook->id}}'> delete</a>
+</div>
 
 <ul>
 
@@ -9,8 +11,9 @@
 <p> {{ $singlebook->released_at}} </p>
 
 <div>
-    <a href= '/books/'> return</a>
+    <a href= '/books'> return</a>
 </div>
+
 </li>
 
 </ul>
