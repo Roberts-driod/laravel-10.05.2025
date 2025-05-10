@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\bookController;
+use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/books', [bookController::class, 'index']);
-Route::get('/books/create' ,[bookController::class, 'create']);
-Route::post('/books' ,[bookController::class, 'store']);
- 
+Route::get('/books', [BookController::class, 'index']);
+Route::get('/books/create' ,[BookController::class, 'create']);
+Route::post('/books' ,[BookController::class, 'store']);
+Route::get('/books/{id}' ,[BookController::class, 'show']);

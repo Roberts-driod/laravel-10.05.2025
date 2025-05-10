@@ -18,14 +18,21 @@ class BookController extends Controller
     return view('books.create');
   }
 
-  public function store(Request $request){
-
-  Book::create([
-    'title' => $request['title'],
-    'author' => $request['author'],
-    'released_at' => $request['released_at'],
-  ]);
+  public function store(Request $request) {
+    // return $request;
+    Book::create([
+        'title' => $request['title'],
+        'author' => $request['author'],
+        'released_at' => $request['released_at'],
+    ]);
 
   return redirect('/books');
 }
+
+public function show($id) {
+  $book = Book::find($id);
+  // return $book;
+ return view('books.show' , ['singlebook' => $book]);
+}
+
 }

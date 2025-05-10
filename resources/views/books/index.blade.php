@@ -1,4 +1,4 @@
-
+<h1> Books</h1>
 
 <a href='/books/create' > create </a>
 <ul>
@@ -9,6 +9,10 @@
 <h2>{{$book->title}} </h2>
 <h3>{{$book->author}} </h3>
 <p> {{ $book->released_at}} </p>
+
+<div>
+    <a href= '/books/{{ $book->id }}'> show </a>
+</div>
 </li>
 
 
