@@ -9,4 +9,6 @@ Route::get('/', function () {
 
 
 Route::get('/books', [bookController::class, 'index']);
-
+Route::get('/books/create' ,[bookController::class, 'create']);
+Route::post('/books' ,[bookController::class, 'store']);
+ 
