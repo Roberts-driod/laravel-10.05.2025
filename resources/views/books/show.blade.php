@@ -1,8 +1,9 @@
 <h1> Book</h1>
-<div>
-    <a href= '/books/{{singlebook->id}}'> delete</a>
-</div>
 
+<form action='/books/{{ $singlebook->id }}/destroy' method="post">
+    @csrf
+    @method('delete')
+    <input type="submit" value='delete'>
 <ul>
 
 <li>
